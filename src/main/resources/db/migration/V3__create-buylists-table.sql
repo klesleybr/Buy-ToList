@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS buy_lists(
+	id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	title VARCHAR(200) NOT NULL,
+	description VARCHAR(500),
+	total_value NUMERIC(10, 2),
+	is_finalized BOOLEAN DEFAULT FALSE,
+	user_id UUID REFERENCES users(id) ON DELETE CASCADE
+);

@@ -1,4 +1,4 @@
-package com.project.buy_to_list.domain.list;
+package com.project.buy_to_list.domain.buylist;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -29,7 +29,7 @@ public class BuyList {
 	@GeneratedValue
 	private UUID id;
 	private Date createdAt;
-	private String name;
+	private String title;
 	private String description;
 	private BigDecimal totalValue;
 	private Boolean isFinalized = false;

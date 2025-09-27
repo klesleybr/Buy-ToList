@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS elements(
+	id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+	product_id UUID REFERENCES products(id) ON DELETE CASCADE,
+	buy_list_id UUID REFERENCES buy_lists(id) ON DELETE CASCADE,
+	date_add DATE DEFAULT CURRENT_DATE,
+	amount INTEGER DEFAULT 0,
+	price NUMERIC(10, 2) DEFAULT 0.00,
+	is_weight_sell BOOLEAN DEFAULT FALSE,
+	weight FLOAT,
+	was_bought BOOLEAN DEFAULT FALSE
+);

@@ -26,7 +26,7 @@ public class Product {
 	@Id
 	@GeneratedValue
 	private UUID id;
-	private String name;
+	private String title;
 	private String brand;
 	private String description;
 	private String imageUrl = null;

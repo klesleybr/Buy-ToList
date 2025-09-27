@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.project.buy_to_list.domain.list.BuyList;
+import com.project.buy_to_list.domain.buylist.BuyList;
 
 public interface BuyListRepository extends JpaRepository<BuyList, UUID> {
 

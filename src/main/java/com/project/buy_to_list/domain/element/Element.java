@@ -31,6 +31,6 @@ public class Element {
 	private BigDecimal price;
 	private Boolean isWeightSell = false;
 	private float weight;
-	private Boolean isBought = false;
+	private Boolean wasBought = false;
 
 }
