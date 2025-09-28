@@ -29,5 +29,16 @@ public class User {
 	private String password;
 	private String imageUrl = null;
 	private Date createdAt;
-
+	
+	public User(String name, String username, String email, String password, String imageUrl, Date createdAt) {
+		
+		this.name = name;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.imageUrl = imageUrl;
+		this.createdAt = createdAt;
+		
+	}
+	
 }
