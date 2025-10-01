@@ -17,8 +17,8 @@ import lombok.Setter;
 @Entity
 @Setter
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Element {
 	
 	@Id
@@ -32,5 +32,81 @@ public class Element {
 	private Boolean isWeightSell = false;
 	private float weight;
 	private Boolean wasBought = false;
+	
+	public Element() {
+		
+	}
+
+	public Boolean getWasBought() {
+		return wasBought;
+	}
+
+	public void setWasBought(Boolean wasBought) {
+		this.wasBought = wasBought;
+	}
+
+	public float getWeight() {
+		return weight;
+	}
+
+	public void setWeight(float weight) {
+		this.weight = weight;
+	}
+
+	public Boolean getIsWeightSell() {
+		return isWeightSell;
+	}
+
+	public void setIsWeightSell(Boolean isWeightSell) {
+		this.isWeightSell = isWeightSell;
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	public Date getDateAdd() {
+		return dateAdd;
+	}
+
+	public void setDateAdd(Date dateAdd) {
+		this.dateAdd = dateAdd;
+	}
+
+	public UUID getBuyListId() {
+		return buyListId;
+	}
+
+	public void setBuyListId(UUID buyListId) {
+		this.buyListId = buyListId;
+	}
+
+	public UUID getProductId() {
+		return productId;
+	}
+
+	public void setProductId(UUID productId) {
+		this.productId = productId;
+	}
+
+	public UUID getId() {
+		return id;
+	}
+
+	public void setId(UUID id) {
+		this.id = id;
+	}
 
 }
