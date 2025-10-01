@@ -41,6 +41,17 @@ public class BuyList {
 	public BuyList() {
 		
 	}
+	
+	public BuyList(Date createdAt, String title, String description, BigDecimal totalValue, Boolean isFinalized, User user) {
+		
+		this.createdAt = createdAt;
+		this.title = title;
+		this.description = description;
+		this.totalValue = totalValue;
+		this.isFinalized = isFinalized;
+		this.user = user;
+		
+	}
 
 	public User getUser() {
 		return user;
