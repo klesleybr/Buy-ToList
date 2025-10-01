@@ -29,7 +29,40 @@ public class UserService {
 		}
 		
 		User user = new User(userData.name(), userData.username(), userData.email(), userData.password(), imageUrl, userData.createdAt());
-		userRepository.save(user);
+		this.userRepository.save(user);
+		return user;
+		
+	}
+	
+	public User editUser(UUID id, UserRequestDTO userData) {
+		
+		User user = this.userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("ERRO - Usuário não encontrado."));
+		
+		if(userData.name() != null)
+			user.setName(userData.name());
+		
+		if(userData.username() != null)
+			user.setUsername(userData.username());
+		
+		if(userData.email() != null)
+			user.setEmail(userData.email());
+		
+		if(userData.password() != null)
+			user.setPassword(userData.password());
+		
+		if(userData.image() != null)
+			user.setImageUrl(uploadImage(userData.image()));
+		
+		this.userRepository.save(user);		
+		return user;
+		
+	}
+	
+	public User deleteUser(UUID id) {
+		
+		User user = userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("ERRO - Usuário não encontrado."));
+		this.userRepository.deleteById(id);
+		
 		return user;
 		
 	}
